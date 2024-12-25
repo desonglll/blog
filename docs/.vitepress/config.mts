@@ -14,6 +14,18 @@ export default defineConfig({
         href: "https://www.rust-lang.org/logos/rust-logo-blk.svg",
       },
     ],
+    [
+      "script",
+      {
+        async: "true",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-KB2KLVFYQE",
+      },
+    ],
+    [
+      "script",
+      {},
+      "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-KB2KLVFYQE');",
+    ],
   ],
   lastUpdated: true,
   markdown: {
