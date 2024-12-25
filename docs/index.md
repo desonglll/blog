@@ -22,3 +22,5 @@ features:
     details: Deep learning is a subfield of machine learning that involves training neural networks to learn patterns in data.
     link: /deep-learning/
 ---
+
+![image](https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/471655377_1973173743166386_5244652975890596109_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f727a1&_nc_ohc=pY_SwhSx3yQQ7kNvgFYXPQN&_nc_zt=23&_nc_ht=scontent-tpe1-1.xx&_nc_gid=AqBlGokgISENTU7TMwMY1VZ&oh=00_AYAblOIngu8cIFKf2LXjsLgE9g_jZw89JrfN3HMH6tvaTA&oe=6771DA85)

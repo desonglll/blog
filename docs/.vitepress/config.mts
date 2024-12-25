@@ -14,6 +14,18 @@ export default defineConfig({
         href: "https://www.rust-lang.org/logos/rust-logo-blk.svg",
       },
     ],
+    // [
+    //   "script",
+    //   {
+    //     async: "true",
+    //     src: "https://www.googletagmanager.com/gtag/js?id=G-KB2KLVFYQE",
+    //   },
+    // ],
+    // [
+    //   "script",
+    //   {},
+    //   "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-KB2KLVFYQE');",
+    // ],
   ],
   lastUpdated: true,
   markdown: {
@@ -34,7 +46,7 @@ export default defineConfig({
 
     sidebar: {
       "/rust/": getMd("./docs/rust", false),
-      "/deep-learning/": [{ text: "Deep Learning", link: "/deep-learning/" }],
+      "/deep-learning/": getMd("./docs/deep-learning", false),
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/desonglll" }],
