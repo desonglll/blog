@@ -1,7 +1,7 @@
 # VitePress files
-.vitepress/cache
-.vitepress/dist
-.vitepress/.temp
+docs/.vitepress/cache
+docs/.vitepress/dist
+docs/.vitepress/.temp
 
 # Node modules
 node_modules/
