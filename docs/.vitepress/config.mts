@@ -15,13 +15,16 @@ export default defineConfig({
       },
     ],
   ],
+  lastUpdated: true,
   markdown: {
     math: true,
     image: {
       lazyLoading: true,
     },
   },
+
   themeConfig: {
+    returnToTopLabel: "Return to top",
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
