@@ -3,9 +3,39 @@ title: Rust Programming Language
 editLink: ture
 ---
 
-This is a index page for [Rust Programming Language](https://www.rust-lang.org/).
+<script setup>
+import { watch } from "vue";
+import { useData } from 'vitepress'
 
-![Rust Logo](./Rust_programming_language_black_logo.svg){width=200 style="display: block; margin: 0 auto;"}
+const { isDark } = useData()
+watch(
+  isDark,
+  (newValue) => {
+    const link = document.querySelector("link[rel='icon']");
+    if (link) {
+      link.href = newValue
+        ? "./Rust_programming_language_white_logo.svg"
+        : "./Rust_programming_language_black_logo.svg";
+    }
+  },
+  { immediate: true }
+);
+</script>
+
+# Rust
+
+<img
+    v-if="isDark"
+    src="./Rust_programming_language_white_logo.svg"
+    alt="Rust Logo - White"
+    style="width: 200px; display: block; margin: 0 auto;"
+/>
+<img
+    v-else
+    src="./Rust_programming_language_black_logo.svg"
+    alt="Rust Logo - Black"
+    style="width: 200px; display: block; margin: 0 auto;"
+/>
 
 [[toc]]
 
