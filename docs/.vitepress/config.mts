@@ -34,5 +34,8 @@ export default defineConfig({
     search: {
       provider: "local",
     },
+    editLink: {
+      pattern: "https://github.com/desonglll/blog/edit/main/docs/:path",
+    },
   },
 });
