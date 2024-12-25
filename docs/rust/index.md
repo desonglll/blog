@@ -37,11 +37,17 @@ watch(
     style="width: 200px; display: block; margin: 0 auto;"
 />
 
+```rust
+fn main() {
+    println!("Hello, world!");// [!code focus]
+}
+```
+
 [[toc]]
 
 ## Rust Playground: Try Rust without installing
 
-[Rust Playground](https://play.rust-lang.org/) is a web-based tool that allows you to write, run, and share Rust code.
+<Mention text="Rust Playground" href="https://play.rust-lang.org/" from="rust-lang" /> is a web-based tool that allows you to write, run, and share Rust code.
 
 ## Installing Rust
 

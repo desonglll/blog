@@ -2,6 +2,13 @@
 title: Rust Mandelbrot
 ---
 
+
+## Introduction
+
+<Mention href="https://en.wikipedia.org/wiki/Mandelbrot_set" text="Mandelbrot Set" from="wiki"/>
+
+## Dependencies
+
 ```toml
 [package]
 name = "mandelbrot"
@@ -14,6 +21,8 @@ image = { version = "0.25.4", features = ["png"] }
 num = "0.4.3"
 num_cpus = "1.16.0"
 ```
+
+## Code
 
 ```rust
 use image::ExtendedColorType;
