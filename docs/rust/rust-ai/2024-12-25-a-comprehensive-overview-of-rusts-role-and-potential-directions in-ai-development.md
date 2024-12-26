@@ -45,7 +45,9 @@ However, Rust has emerged as a compelling alternative, steadily gaining traction
 
 Rust is a memory-safe, compiled programming language that combines high-level simplicity with low-level performance. It has become a popular choice for building systems where performance is paramount, such as game engines, databases, operating systems, and applications targeting WebAssembly.
 
-Rust originated as a side project by Graydon Hoare in 2007, named after the rust fungus. In 2009, it gained sponsorship from Mozilla, and since 2016, it has consistently been ranked as the most loved programming language in developer surveys. Rust enthusiasts are affectionately known as "Rustaceans." According to the 2023 StackOverflow survey, Rust is the most admired language, more than 80% of developers that use it want to use it again next year.[[https://survey.stackoverflow.co/2023/#programming-scripting-and-markup-languages\]](https://survey.stackoverflow.co/2023/#programming-scripting-and-markup-languages)
+Rust, named after the rust fungus, originated as a side project by Graydon Hoare in 2007. In 2009, it gained sponsorship from Mozilla, and since 2016, it has consistently been ranked as the most loved programming language in developer surveys. Rust enthusiasts are affectionately known as "Rustaceans." According to the [2023 StackOverflow survey](https://survey.stackoverflow.co/2023/#programming-scripting-and-markup-languages), Rust is the most admired language, more than 80% of developers want to use it again next year.
+
+![2023 StackOverflow survey](https://raw.githubusercontent.com/desonglll/picBed/main/picdesired_vs_admired_languages.png)
 
 Rust's consistent recognition as the "Most Loved Programming Language" in the annual StackOverflow Developer Survey for several consecutive years alone makes it worthy of serious study. While the merits of Rust as a programming language are well-documented, this discussion will focus on a few personal impressions from my experience with it.
 
