@@ -7,5 +7,10 @@
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",
     "vitepress": "^1.5.0"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.17.13",
+    "change-case": "^5.4.4",
+    "lodash": "^4.17.21"
   }
 }

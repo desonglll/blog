@@ -34,7 +34,7 @@ export default defineConfig({
       lazyLoading: true,
     },
   },
-
+  cleanUrls: true,
   themeConfig: {
     returnToTopLabel: "Return to top",
     // https://vitepress.dev/reference/default-theme-config
@@ -42,11 +42,13 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Rust", link: "/rust/" },
       { text: "Deep Learning", link: "/deep-learning/" },
+      { text: "Writting", link: "/writting/" },
     ],
 
     sidebar: {
       "/rust/": getMd("./docs/rust", false),
       "/deep-learning/": getMd("./docs/deep-learning", false),
+      "/writting/": getMd("./docs/writting", false),
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/desonglll" }],
@@ -56,5 +58,6 @@ export default defineConfig({
     editLink: {
       pattern: "https://github.com/desonglll/blog/edit/main/docs/:path",
     },
+    externalLinkIcon: true,
   },
 });
