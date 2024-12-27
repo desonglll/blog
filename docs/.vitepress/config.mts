@@ -35,6 +35,16 @@ export default defineConfig({
     },
   },
   cleanUrls: true,
+  vite: {
+    css: {
+      preprocessorOptions: {
+        css: {
+          additionalData: '@import "./theme/style.css";'
+        }
+      }
+    }
+  },
+
   themeConfig: {
     returnToTopLabel: "Return to top",
     // https://vitepress.dev/reference/default-theme-config
