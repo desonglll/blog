@@ -1,0 +1,4 @@
+/* 设置全局内容为两端对齐 */
+.content {
+  text-align: justify;
+}
