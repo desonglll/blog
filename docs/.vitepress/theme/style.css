@@ -1,8 +1,4 @@
-/* 设置 Markdown 渲染区域为两端对齐 */
-.markdown-body {
-  text-align: justify; /* 设置两端对齐 */
-  text-justify: inter-word; /* 优化单词间距 */
-  hyphens: auto; /* 自动断词 */
-  word-break: break-word; /* 长单词换行 */
-  line-height: 1.8; /* 提升可读性 */
+/* docs/.vitepress/theme/index.css */
+.container {
+  text-align: justify; /* 设置文本两端对齐 */
 }
