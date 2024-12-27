@@ -21,19 +21,13 @@ In the crowded landscape of modern programming languages, Rust is different.[Pro
 
 ## Background
 
-### The Advent of ChatGPT and the Renaissance of AI Applications
+The introduction of ChatGPT has ushered in a new golden era for artificial intelligence (AI), redefining the application landscape through large language models (LLMs). With their unprecedented capabilities, have significantly lowered barriers to application development, enabling the creation of innovative and diverse AI-driven products. This dynamic ecosystem of creativity exemplifies the transformative potential of modern AI.
 
-The introduction of ChatGPT has ushered in a new golden era for artificial intelligence (AI), redefining the application landscape through large language models (LLMs). These models, with their unprecedented capabilities, have significantly lowered barriers to application development, enabling the creation of innovative and diverse AI-driven products. This dynamic ecosystem of creativity exemplifies the transformative potential of modern AI.
-
-At the heart of this revolution lies the large language model (LLM), epitomized by ChatGPT. LLMs excel at generating text sequentially based on contextual input, showcasing exceptional comprehension and generative abilities that surpass those of earlier AI models. Their remarkable performance is a direct result of their scale, characterized by an immense number of parameters. However, this scale comes at a cost: substantial computational resources are required to load and execute these models efficiently, making performance optimization a critical challenge.
-
-### Scaling Challenges and Quantization Strategies
+The large language model (LLM), epitomized by ChatGPT, is at the heart of this revolution. LLMs excel at generating text sequentially based on contextual input, showcasing exceptional comprehension and generative abilities that surpass those of earlier AI models. Their remarkable performance is a direct result of their scale, characterized by an immense number of parameters. However, this scale comes at a cost: substantial computational resources are required to load and execute these models efficiently, making performance optimization a critical challenge.
 
 LLM parameters comprise a vast array of numerical values, typically represented as FP32 floating-point numbers. Quantization techniques, such as converting parameters to FP16, BF16, or integer formats, offer a practical solution to mitigate memory demands and enhance execution speed. These methods reduce storage requirements while often improving computational efficiency.
 
 Beyond quantization, the optimization of numerical computations often hinges on parallelization. Parallelism has become the cornerstone of performance enhancement in LLMs and deep learning. Specialized hardware accelerators, such as GPUs and TPUs, are designed to maximize parallel processing capabilities. Even in the absence of such devices, modern CPUs—including those in mobile platforms—can exploit data-level, instruction-level, and thread-level parallelism to achieve significant performance gains. Additional optimizations can be realized by refining storage hierarchies and optimizing data transfer mechanisms.
-
-### Programming Paradigms for Optimization: From C++ to Rust
 
 The pursuit of these optimization strategies is deeply intertwined with computer systems and often necessitates low-level programming in languages like C or C++. These languages provide fine-grained control over hardware resources, making them indispensable for high-performance AI development.
 
@@ -57,9 +51,21 @@ Earlier this year, the United States did some research and tried to figure out w
 
 Traditional high-level languages often rely on garbage collectors to manage memory, abstracting away manual control but sometimes introducing runtime overhead. Conversely, low-level languages like C and C++ provide explicit functions for memory management, such as malloc and free, but leave room for critical errors like memory leaks or undefined behavior. Rust takes a novel approach, achieving memory safety without a garbage collector through its ownership and borrowing system.
 
+```rust
+let s: String = String::from("hello"); // `s` owned the value of string
+let _borrow: String = s; // _borrow takes the ownership of s
+println!("{:?}", s); // error: borrow of moved value: `s`
+```
+
 In Rust, every variable is immutable by default, enabling values to be stored on the stack, which offers minimal performance overhead. Mutable variables or objects with sizes unknown at compile time are allocated on the heap. Each value in a Rust program is assigned a single "owner" variable, and when the owner goes out of scope, the associated memory is automatically deallocated.
 
 When a program needs to access a value without taking ownership, it can "borrow" a reference to the memory. Borrowing is governed by strict rules enforced by Rust’s borrow checker at compile time, ensuring memory safety and preventing data races in concurrent programs. This system offers developers fine-grained control over performance without sacrificing safety.
+
+```rust
+let s: String = String::from("hello");
+let _borrow: &String = &s; // borrowed `s` as immutable.
+println!("{:?}", s);
+```
 
 ## Inference
 

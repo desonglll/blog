@@ -9,9 +9,9 @@ lastUpdated: true
     - What is the research used for? (Introduce the Object, Normally a practical something: a medical neural)
     - The disadvantage of existing methods. (Expensive, Cost, Low accuracy)
     - In this paper, we introduce XXX: a …
-        - It include …
+        - It includes…
         - Firstly(Initially), we proposed a method
-        - Meanwhile, we noticed the previous method can not achieve the expected performance.
+        - Meanwhile, we noticed the previous method could not achieve the expected performance.
             - Thus we propose a … to tackle this.
         - Besides, we integrating … to our model to improve something/to tackle this challenge
         - Extensive experiments show that our … significantly outperforms the state-of-the-art methods on …datasets without increasing the cost.
