@@ -1,4 +1,8 @@
-/* 设置全局内容为两端对齐 */
+/* 针对内容区域设置两端对齐 */
 .content {
   text-align: justify;
+  text-justify: inter-word; /* 优化单词间距 */
+  hyphens: auto; /* 启用自动断词 */
+  word-break: break-word; /* 允许长单词换行 */
+  line-height: 1.8; /* 调整行高，提升可读性 */
 }
