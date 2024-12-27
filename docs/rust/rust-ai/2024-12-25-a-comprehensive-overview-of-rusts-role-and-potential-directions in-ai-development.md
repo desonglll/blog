@@ -15,15 +15,9 @@ lastUpdated: true
 
 ## Introduction
 
-The existing method for training a deep learning model uses a framework like PyTorch or TensorFlow[[https://doi.org/10.48550/arXiv.1603.04467\]](https://doi.org/10.48550/arXiv.1603.04467) based on Python. Python has a widespread ecosystem, and its syntax is friendly to people without programming experience. However, the performance of these frameworks doesn't fully exploit the device's computational resources because Python is an interpretational language.
+The introduction of [ChatGPT](@inproceedings{Radford2018ImprovingLU,  title={Improving Language Understanding by Generative Pre-Training},  author={Alec Radford and Karthik Narasimhan},  year={2018},  url={https://api.semanticscholar.org/CorpusID:49313245} }) has ushered in a new golden era for artificial intelligence (AI), redefining the application landscape through large language models (LLMs). With their unprecedented capabilities, have significantly lowered barriers to application development, enabling the creation of innovative and diverse AI-driven products. This dynamic ecosystem of creativity exemplifies the transformative potential of modern AI.
 
-In the crowded landscape of modern programming languages, Rust is different.[Programming Rust 2ed] Rust is revolutionizing high-performance service development with its memory safety, resource management, and speed. [[https://doi.org/10.1145/3673648\]](https://doi.org/10.1145/3673648) Rust offers the speed of a compiled language, the efficiency of a non-garbage-collected language, and the type safety of a functional language—as well as a unique solution to memory safety problems.*[Programming Rust 2ed]* The application of Rust in the field of machine learning is developing rapidly. The Hugging Face team uses Rust as the backend of the tokenizers library to improve performance and versatility. [[https://github.com/huggingface/tokenizers\]](https://github.com/huggingface/tokenizers) Hundreds of Rust repositories have been established on GitHub, driving significant progress in Machine Learning.
-
-## Background
-
-The introduction of ChatGPT has ushered in a new golden era for artificial intelligence (AI), redefining the application landscape through large language models (LLMs). With their unprecedented capabilities, have significantly lowered barriers to application development, enabling the creation of innovative and diverse AI-driven products. This dynamic ecosystem of creativity exemplifies the transformative potential of modern AI.
-
-The large language model (LLM), epitomized by ChatGPT, is at the heart of this revolution. LLMs excel at generating text sequentially based on contextual input, showcasing exceptional comprehension and generative abilities that surpass those of earlier AI models. Their remarkable performance is a direct result of their scale, characterized by an immense number of parameters. However, this scale comes at a cost: substantial computational resources are required to load and execute these models efficiently, making performance optimization a critical challenge.
+The large language model (LLM), epitomized by ChatGPT, is at the heart of this revolution. [LLMs excel at generating text sequentially based on contextual input, showcasing exceptional comprehension and generative abilities that surpass those of earlier AI models.](https://arxiv.org/abs/2005.14165) Their remarkable performance is a direct result of their scale, characterized by an immense number of parameters. However, this scale comes at a cost: substantial computational resources are required to load and execute these models efficiently, making performance optimization a critical challenge.
 
 LLM parameters comprise a vast array of numerical values, typically represented as FP32 floating-point numbers. Quantization techniques, such as converting parameters to FP16, BF16, or integer formats, offer a practical solution to mitigate memory demands and enhance execution speed. These methods reduce storage requirements while often improving computational efficiency.
 
@@ -31,11 +25,19 @@ Beyond quantization, the optimization of numerical computations often hinges on 
 
 The pursuit of these optimization strategies is deeply intertwined with computer systems and often necessitates low-level programming in languages like C or C++. These languages provide fine-grained control over hardware resources, making them indispensable for high-performance AI development.
 
+
+
+The existing method for training a deep learning model uses a framework like PyTorch or [TensorFlow](https://doi.org/10.48550/arXiv.1603.04467) based on Python. Python has a widespread ecosystem, and its syntax is friendly to people without programming experience. However, the performance of these frameworks doesn't fully exploit the device's computational resources because Python is an interpretational language.
+
+In the crowded landscape of modern programming languages, Rust is different.[Programming Rust 2ed] [Rust is revolutionizing high-performance service development with its memory safety, resource management, and speed. ](https://doi.org/10.1145/3673648) [Rust offers the speed of a compiled language, the efficiency of a non-garbage-collected language, the type safety of a functional language—and a unique solution to memory safety problems.](Programming-Rust-2ed) The application of Rust in the field of machine learning is developing rapidly. The Hugging Face team uses Rust as the backend of the [tokenizers](https://github.com/huggingface/tokenizers) library to improve performance and versatility. Hundreds of Rust repositories have been established on GitHub, driving significant progress in Machine Learning.
+
+
+
 However, Rust has emerged as a compelling alternative, steadily gaining traction in the AI domain. While C and C++ are established mainstays, Rust offers unique advantages, including memory safety, concurrency support, and a growing ecosystem of libraries tailored for AI development. Rust’s design philosophy prioritizes safety and performance, making it an attractive choice for developers seeking to balance computational efficiency with code reliability.
 
-## Rust
+## The Unique Advantages of Rust in AI Development
 
-### A Memory-Safe Programming Language for High-Performance Systems
+#### A Memory-Safe Programming Language for High-Performance Systems
 
 Rust is a memory-safe, compiled programming language that combines high-level simplicity with low-level performance. It has become a popular choice for building systems where performance is paramount, such as game engines, databases, operating systems, and applications targeting WebAssembly.
 
@@ -47,7 +49,7 @@ Rust's consistent recognition as the "Most Loved Programming Language" in the an
 
 Earlier this year, the United States did some research and tried to figure out which language would be the safest as they wanted to overhaul their cyber security and defense systems and also improve the quality and resilience of their services. The report mentions "Rust, one example of a memory safe programming language, has the three requisite properties above, but has not yet been proven in space systems."
 
-### Memory Management: Ownership and Borrowing
+#### Memory Management: Ownership and Borrowing
 
 Traditional high-level languages often rely on garbage collectors to manage memory, abstracting away manual control but sometimes introducing runtime overhead. Conversely, low-level languages like C and C++ provide explicit functions for memory management, such as malloc and free, but leave room for critical errors like memory leaks or undefined behavior. Rust takes a novel approach, achieving memory safety without a garbage collector through its ownership and borrowing system.
 
@@ -95,7 +97,9 @@ If Rust aims to replicate the success of PyTorch, a critical question arises: wh
 
 The potential niche lies Rust in edge-device training, where its performance and memory efficiency could offer significant advantages. This aligns with the strengths of Rust, providing a promising direction for further exploration in the AI training ecosystem. However, achieving widespread adoption in algorithm development will require substantial innovation and differentiation from established Python-based frameworks.
 
-## Challenges
+## Current Applications of Rust in AI
+
+## Challenges Facing Rust in AI Development
 
 While the previous sections highlighted Rust's opportunities and strengths within the AI ecosystem, it is equally crucial to address potential challenges and disruptions.
 
