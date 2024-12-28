@@ -27,21 +27,20 @@ In addition to memory optimization, parallelism is a cornerstone of high-perform
 
 The success of AI applications hinges not only on computational performance but also on the safety and reliability of the systems. Memory safety is a critical concern, especially when dealing with large-scale models that require extensive memory management. Traditional low-level languages such as C and C++ provide fine-grained control over hardware, allowing developers to optimize performance, but they come with the risk of memory leaks and race conditions. The need for a safer programming model that reduces these risks while maintaining high performance is growing. Modern programming languages such as **Rust** offer significant advantages in this regard, as they combine fine-grained control over system resources with strict memory safety guarantees, making them increasingly popular for AI development.
 
-Thus, as AI systems continue to evolve, the demand for programming languages that can balance **performance, safety**, and **concurrency** becomes paramount. The ability to write high-performance code that is both memory-safe and capable of efficient parallelism is critical to the continued success and scalability of AI technologies. With its ownership model and thread-safety features, languages like Rust are emerging as strong contenders for AI development, particularly in resource-intensive models like LLMs.
+Thus, as AI systems continue to evolve, the demand for programming languages that can balance **performance, safety**, and **concurrency** becomes paramount. The ability to write high-performance code that is both memory-safe and capable of efficient parallelism is critical to AI technologies' continued success and scalability. With its ownership model and thread-safety features, languages like Rust are emerging as strong contenders for AI development, particularly in resource-intensive models like LLMs.
 
 > Rust's Uniqueness: Emphasizing How Rust's Memory Safety, Performance, and Concurrency Model Meet the Needs of AI Development.
 
-The existing methods for training deep learning models commonly utilize frameworks like PyTorch or  [TensorFlow](https://doi.org/10.48550/arXiv.1603.04467), which are based on **Python**. Python has gained widespread popularity due to its accessible syntax and extensive ecosystem, making it particularly attractive to developers without deep programming experience. However, while Python excels in ease of use, its interpreted nature limits the ability to exploit the computational resources of modern hardware fully. As a result, performance in frameworks like TensorFlow and PyTorch often falls short in terms of maximizing hardware utilization, especially when scaling deep learning models.
-
-**TODO: Framework working comparison**
-
-|      |      |      |
-| ---- | ---- | ---- |
-|      |      |      |
-|      |      |      |
-|      |      |      |
+The existing methods for training deep learning models commonly utilize frameworks like PyTorch or  [TensorFlow](https://doi.org/10.48550/arXiv.1603.04467), which are based on **Python**. Python has gained widespread popularity due to its accessible syntax and extensive ecosystem, making it particularly attractive to developers without deep programming experience. However, while Python excels in ease of use, its interpreted nature limits the ability to fully exploit modern hardware's computational resources. As a result, performance in frameworks like TensorFlow and PyTorch often falls short in terms of maximizing hardware utilization, especially when scaling deep learning models.
 
 In contrast, [**Rust** stands out in the crowded landscape of modern programming languages. Rust is rapidly gaining traction, particularly in high-performance applications, due to its memory safety, fine-grained resource management, and speed.](https://doi.org/10.48550/arXiv.2206.05503) Unlike Python, Rust is a compiled language that ensures direct access to system resources, which significantly enhances performance. Rust’s memory safety features—achieved through its ownership model and absence of garbage collection—allow for precise control over memory usage while preventing common issues such as memory leaks or race conditions, which are particularly important in large-scale AI applications.
+
+|                                                              | Rust               | Python(with joblib) |
+| ------------------------------------------------------------ | ------------------ | ------------------- |
+| 1_000_000_000 floating calculation on M1 Macbook Air (Multi-thread) | 0.1868(with rayon) | 1.0019(with joblib) |
+| matrix_multiply (500*500)                                    | 0.0966(with rayon) | 1.5230(with joblib) |
+
+![Rust vs Python Performance Comparison (On Apple M1 Chip)<br>Multi-thread Optimized](https://raw.githubusercontent.com/desonglll/picBed/main/picrust_vs_python_performance.png)
 
 Rust’s **concurrency model** further strengthens its suitability for AI development. AI applications, particularly those involving large-scale data processing or neural network training, require efficient parallel execution to fully leverage modern hardware. Rust’s concurrency model ensures thread safety without needing a garbage collector, making it highly effective in environments where concurrency and parallelism are essential. This is a significant advantage over languages like Python, where concurrency is often limited by Global Interpreter Lock (GIL) and memory management challenges.
 
@@ -98,6 +97,8 @@ While server-side AI continues to be dominated by CUDA and C/C++ due to GPU usag
 Rust has been essential for intelligent devices, particularly those utilizing RISC-V architectures. A notable recent development is Vivo's launch of BlueOS, an AI operating system fully developed in Rust, which underscores its capabilities in edge computing.
 
 The emergence of large language models (LLMs) has highlighted the importance of optimizing performance due to their significant computational requirements and slow inference speeds. As LLMs continue to develop, enhancing computational efficiency will be crucial. The advanced language features of Rust make it particularly well-suited to address these challenges, creating an ideal partnership for advancing inference technologies in artificial intelligence.
+
+![rust_in_intelligent_devices_and_edge_computing](https://raw.githubusercontent.com/desonglll/picBed/main/picrust_in_intelligent_devices_and_edge_computing.png)
 
 ### Middleware
 
