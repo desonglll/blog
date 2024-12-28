@@ -17,9 +17,9 @@ lastUpdated: true
 
 > Background: Briefly describe the development of artificial intelligence and its requirements for programming languages (such as performance, safety, and concurrency)
 
-The advent of large language models (LLMs), epitomized by models such as [ChatGPT](https://api.semanticscholar.org/CorpusID:49313245), has ushered in a transformative era in artificial intelligence (AI). These models have significantly expanded the potential applications of AI, enabling a wide range of innovative products. Their ability to generate coherent and contextually relevant text has redefined the way AI is applied across industries, demonstrating the exceptional progress in natural language processing. This breakthrough marks a pivotal moment in AI development, highlighting the need for advanced computational methods to manage the increasing scale and complexity of modern AI systems.
+The advent of large language models (LLMs), epitomized by models such as [ChatGPT](https://api.semanticscholar.org/CorpusID:49313245), has ushered in a transformative era in artificial intelligence (AI). These models have significantly expanded the potential applications of AI, enabling a wide range of innovative products. Their ability to generate coherent and contextually relevant text has redefined the way AI is applied across industries, demonstrating exceptional progress in natural language processing. This breakthrough marks a pivotal moment in AI development, highlighting the need for advanced computational methods to manage the increasing scale and complexity of modern AI systems.
 
-[The development of LLMs, characterized by their vast scale and numerous parameters, has led to unparalleled performance in natural language tasks](https://arxiv.org/abs/2005.14165). However, such advancements come with substantial computational requirements, particularly in terms of memory, processing power, and energy efficiency. As these models grow in size, the demand for high-performance programming languages capable of optimizing these resources has never been more critical. The efficiency of an AI system is heavily influenced by how well its underlying code manages these resources, particularly in large-scale deployments.
+[The development of LLMs, characterized by their vast scale and numerous parameters, has led to unparalleled performance in natural language tasks](https://arxiv.org/abs/2005.14165). However, such advancements come with substantial computational requirements, particularly regarding memory, processing power, and energy efficiency. As these models grow, the demand for high-performance programming languages capable of optimizing these resources has never been more critical. The efficiency of an AI system is heavily influenced by how well its underlying code manages these resources, particularly in large-scale deployments.
 
 One of the primary challenges in scaling AI models is the memory and computational burden associated with managing billions of parameters, typically represented as floating-point numbers (e.g., FP32). Quantization techniques, such as converting to FP16, BF16, or even integer formats, offer an effective solution to mitigate the memory footprint and speed up execution. These techniques are essential for the efficient deployment of LLMs, particularly on resource-constrained platforms such as mobile devices or edge devices.
 
@@ -27,11 +27,19 @@ In addition to memory optimization, parallelism is a cornerstone of high-perform
 
 The success of AI applications hinges not only on computational performance but also on the safety and reliability of the systems. Memory safety is a critical concern, especially when dealing with large-scale models that require extensive memory management. Traditional low-level languages such as C and C++ provide fine-grained control over hardware, allowing developers to optimize performance, but they come with the risk of memory leaks and race conditions. The need for a safer programming model that reduces these risks while maintaining high performance is growing. Modern programming languages such as **Rust** offer significant advantages in this regard, as they combine fine-grained control over system resources with strict memory safety guarantees, making them increasingly popular for AI development.
 
-Thus, as AI systems continue to evolve, the demand for programming languages that can balance **performance, safety**, and **concurrency** becomes paramount. The ability to write high-performance code that is both memory-safe and capable of efficient parallelism is critical to the continued success and scalability of AI technologies. Languages like Rust, with its ownership model and thread-safety features, are emerging as strong contenders for AI development, particularly in the context of resource-intensive models like LLMs.
+Thus, as AI systems continue to evolve, the demand for programming languages that can balance **performance, safety**, and **concurrency** becomes paramount. The ability to write high-performance code that is both memory-safe and capable of efficient parallelism is critical to the continued success and scalability of AI technologies. With its ownership model and thread-safety features, languages like Rust are emerging as strong contenders for AI development, particularly in resource-intensive models like LLMs.
 
 > Rust's Uniqueness: Emphasizing How Rust's Memory Safety, Performance, and Concurrency Model Meet the Needs of AI Development.
 
-The existing methods for training deep learning models commonly utilize frameworks like PyTorch or  [TensorFlow](https://doi.org/10.48550/arXiv.1603.04467) , which are based on **Python**. Python has gained widespread popularity due to its accessible syntax and extensive ecosystem, making it particularly attractive to developers without deep programming experience. However, while Python excels in ease of use, its interpreted nature limits the ability to fully exploit the computational resources of modern hardware. As a result, performance in frameworks like TensorFlow and PyTorch often falls short in terms of maximizing hardware utilization, especially when scaling deep learning models.
+The existing methods for training deep learning models commonly utilize frameworks like PyTorch or  [TensorFlow](https://doi.org/10.48550/arXiv.1603.04467), which are based on **Python**. Python has gained widespread popularity due to its accessible syntax and extensive ecosystem, making it particularly attractive to developers without deep programming experience. However, while Python excels in ease of use, its interpreted nature limits the ability to exploit the computational resources of modern hardware fully. As a result, performance in frameworks like TensorFlow and PyTorch often falls short in terms of maximizing hardware utilization, especially when scaling deep learning models.
+
+**TODO: Framework working comparison**
+
+|      |      |      |
+| ---- | ---- | ---- |
+|      |      |      |
+|      |      |      |
+|      |      |      |
 
 In contrast, [**Rust** stands out in the crowded landscape of modern programming languages. Rust is rapidly gaining traction, particularly in high-performance applications, due to its memory safety, fine-grained resource management, and speed.](https://doi.org/10.48550/arXiv.2206.05503) Unlike Python, Rust is a compiled language that ensures direct access to system resources, which significantly enhances performance. Rust’s memory safety features—achieved through its ownership model and absence of garbage collection—allow for precise control over memory usage while preventing common issues such as memory leaks or race conditions, which are particularly important in large-scale AI applications.
 
@@ -43,7 +51,7 @@ Rust’s unique combination of **memory safety**, **performance**, and **concurr
 
 The goal of this paper is to explore the current state, challenges, and future potential of Rust in AI development. While Rust has demonstrated significant promise in high-performance AI applications due to its memory safety, speed, and concurrency capabilities, its adoption in the AI field remains limited compared to established languages like Python. This paper will discuss the ongoing developments, the challenges faced in integrating Rust with AI frameworks, and the opportunities it presents for advancing AI research and deployment, particularly in resource-constrained environments and large-scale model training.
 
-## The Unique Advantages of Rust in AI Development
+## Overview of Rust Programming Language
 
 #### A Memory-Safe Programming Language for High-Performance Systems
 
@@ -79,7 +87,9 @@ let _borrow: &String = &s; // borrowed `s` as immutable.
 println!("{:?}", s);
 ```
 
-## Inference
+## Rust in AI
+
+### Inference
 
 Inference is becoming a natural and promising application of Rust in artificial intelligence, especially for edge devices. Most traditional model inference relies on interpreter programming languages such as Python. However, in some high-performance situations, these interpreter languages may not satisfy these requirements. 
 
@@ -89,7 +99,7 @@ Rust has been essential for intelligent devices, particularly those utilizing RI
 
 The emergence of large language models (LLMs) has highlighted the importance of optimizing performance due to their significant computational requirements and slow inference speeds. As LLMs continue to develop, enhancing computational efficiency will be crucial. The advanced language features of Rust make it particularly well-suited to address these challenges, creating an ideal partnership for advancing inference technologies in artificial intelligence.
 
-## Middleware
+### Middleware
 
 The next significant advancement of Rust in AI is in middleware, especially those that support large language models (LLMs). Among these, vector search libraries are particularly prominent, with Qdrant leading due to its outstanding performance and user-friendly design. Additionally, frameworks like Meilisearch have gained considerable popularity as a mature alternative to ElasticSearch for full-text search. The middleware ecosystem is further enhanced by notable tools such as Tantivy, Toshi, Lnx, and Websurfx.
 
@@ -97,7 +107,7 @@ An intriguing advancement in this field is Paradedb, which combines full-text an
 
 The scope of middleware goes beyond basic components; it includes memory management, task scheduling, resource pooling, task orchestration, and workflow design, particularly for applications centered around large language models (LLMs). As the application layer evolves, the growing complexity of LLM-driven systems will require more advanced middleware solutions. Rust, known for its strong performance and versatility, is well-suited to tackle these emerging challenges.
 
-## Training
+### Training
 
 In the domain of training, Rust is gradually expanding its presence beyond inference, though its role remains in an exploratory and nascent phase. While Rust shows promise in stable engineering applications, its adoption for algorithm development is still limited.
 
@@ -108,6 +118,8 @@ If Rust aims to replicate the success of PyTorch, a critical question arises: wh
 The potential niche lies Rust in edge-device training, where its performance and memory efficiency could offer significant advantages. This aligns with the strengths of Rust, providing a promising direction for further exploration in the AI training ecosystem. However, achieving widespread adoption in algorithm development will require substantial innovation and differentiation from established Python-based frameworks.
 
 ## Current Applications of Rust in AI
+
+
 
 ## Challenges Facing Rust in AI Development
 
