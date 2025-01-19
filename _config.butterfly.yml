@@ -288,7 +288,7 @@ aside:
       link: https://github.com/desonglll
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: Started at Sun Jan 19 2025!
   card_recent_post:
     enable: true
     # If set 0 will show all
