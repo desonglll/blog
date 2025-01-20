@@ -7,6 +7,12 @@ tags:
     - Rust
 ---
 
+## Install Rust
+
+```shell
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
 ## Switch between nightly and release version of Rust
 
 ```shell
