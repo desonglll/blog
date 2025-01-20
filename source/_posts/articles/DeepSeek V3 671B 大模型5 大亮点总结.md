@@ -1,3 +1,8 @@
+---
+title: DeepSeek V3 671B 大模型5 大亮点总结
+date: 2025-01-19 22:12:45
+tags:
+---
 # DeepSeek V3 671B 大模型5 大亮点总结
 
 原创 小九九爸爸 [Python 智能研习社](javascript:void(0);) *2024年12月27日 08:47* *湖北* *标题已修改*

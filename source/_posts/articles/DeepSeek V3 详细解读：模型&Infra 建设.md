@@ -1,3 +1,8 @@
+---
+title: DeepSeek V3 详细解读：模型&Infra 建设
+date: 2025-01-19 22:12:45
+tags:
+---
 # DeepSeek V3 详细解读：模型&Infra 建设
 
 原创 AI闲谈 [AI闲谈](javascript:void(0);) *2025年01月03日 19:59* *北京*

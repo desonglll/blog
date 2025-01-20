@@ -1,3 +1,8 @@
+---
+title: DeepSeek-llm-7B-Chat微调教程
+date: 2025-01-19 22:12:45
+tags:
+---
 # DeepSeek-llm-7B-Chat微调教程
 
 LiteAI [LiteAI](javascript:void(0);) *2024年12月24日 22:19* *北京*

@@ -13,7 +13,7 @@ category:
 ### Create a Ubuntu container
 
 ```shell
-docker run -d --name my-ububntu -p 22:22 -p 8080:8080 -p 80:80 -p 5173:5173 ubuntu # <host_port:container_port>
+docker run -itd --name my-ubuntu -p 22:22 -p 8080:8080 -p 80:80 -p 5173:5173 ubuntu /bin/bash # <host_port:container_port>
 docker ps -a
 docker exec -it <container_id> /bin/bash
 ```
