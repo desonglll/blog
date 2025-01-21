@@ -32,18 +32,16 @@ Then paste the following configuration into `docker-compose.yml`
 # docker-compose.yml
 services:
   backend:
-    image: desonglll/sd-get-backend
+    image: desonglll/sd-get-backend:latest
     container_name: sd-get-backend
     ports:
       - "8000:8000"
-    volumes:
-      - ./backend:/app
     environment:
       - DJANGO_SETTINGS_MODULE=sd_pro.settings
       - DEBUG=1
 
   frontend:
-    image: desonglll/sd-get-frontend
+    image: desonglll/sd-get-frontend:latest
     container_name: sd-get-frontend
     ports:
       - "3000:80"
