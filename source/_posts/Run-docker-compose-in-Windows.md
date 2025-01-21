@@ -8,6 +8,15 @@ category:
 date: 2025-01-21 17:36:48
 ---
 
+## Build with log
+
+```shell
+docker build -t <name> . --no-cache --platform linux/amd64 --progress=plain
+```
+
+## Build Docker image using Github Action
+
+[Reference](https://medium.com/@wasdsro/tutorial-building-a-docker-container-via-github-actions-8636bdc931b1)
 
 ## Install Docker
 
@@ -15,7 +24,7 @@ date: 2025-01-21 17:36:48
 
 ## Install WSL2
 
-右键Windows图标，打开 PowerShell（以管理员身份运行）
+Right click Windows icon, open PowerShell(with admin)
 
 ```powershell
 wsl --install
