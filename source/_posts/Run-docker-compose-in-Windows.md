@@ -61,4 +61,56 @@ docker-compose up -d
 
 ```
 http://localhost:3000/sd-pro/
+http://localhost:8000/admin/ # mike 070011
+```
+
+![Done](https://scontent-tpe1-1.xx.fbcdn.net/v/t39.30808-6/474221949_1991857497964677_2622951236302317547_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=f727a1&_nc_ohc=yZqVN7GBwuwQ7kNvgGDjRP6&_nc_zt=23&_nc_ht=scontent-tpe1-1.xx&_nc_gid=AZGcV_nPBoq6UKCLD2Y4FTv&oh=00_AYBbSAKbBWyrmR4UBDZjItAonjcKwEXPb7FhU8FaEqCWtA&oe=679599B5) 
+
+## Github Actions
+
+```yml
+name: Build and Push Multi-Arch Docker Images
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Setup QEMU
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: all
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build and push frontend image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./frontend
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/sd-get-frontend:latest
+          platforms: linux/amd64,linux/arm64
+
+      - name: Build and push backend image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./backend
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/sd-get-backend:latest
+          platforms: linux/amd64,linux/arm64
 ```
