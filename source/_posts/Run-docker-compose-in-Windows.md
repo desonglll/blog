@@ -24,6 +24,31 @@ wsl --set-default-version 2
 
 ## Docker Compose file
 
+```shell
+docker run -d \
+  --name sd-get-backend \
+  -p 8000:8000 \
+  -e DJANGO_SETTINGS_MODULE=sd_pro.settings \
+  -e DEBUG=1 \
+  desonglll/sd-get-backend:latest
+```
+
+```shell
+docker run -d \
+  --name sd-get-frontend \
+  -p 3000:80 \
+  desonglll/sd-get-frontend:latest
+```
+
+**ALL IN ONE**
+
+```shell
+docker run -d --name sd-get-backend -p 8000:8000 -e DJANGO_SETTINGS_MODULE=sd_pro.settings -e DEBUG=1 desonglll/sd-get-backend:latest && \
+docker run -d --name sd-get-frontend -p 3000:80 desonglll/sd-get-frontend:latest
+```
+
+**OR**
+
 Create a `docker-compose.yml` file in a folder.
 
 Then paste the following configuration into `docker-compose.yml`
