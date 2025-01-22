@@ -94,7 +94,7 @@ docker-compose up -d
 ## Open entrypoint
 
 ```
-http://localhost:3000/sd-pro/
+http://localhost:3000/
 http://localhost:8000/admin/ # mike 070011
 ```
 
