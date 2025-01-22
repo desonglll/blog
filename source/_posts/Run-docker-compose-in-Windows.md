@@ -35,25 +35,25 @@ wsl --set-default-version 2
 
 ```shell
 docker run -d \
-  --name sd-get-backend \
+  --name sd-pro-backend \
   -p 8000:8000 \
   -e DJANGO_SETTINGS_MODULE=sd_pro.settings \
   -e DEBUG=1 \
-  desonglll/sd-get-backend:latest
+  desonglll/sd-pro-backend:latest
 ```
 
 ```shell
 docker run -d \
-  --name sd-get-frontend \
+  --name sd-pro-frontend \
   -p 3000:80 \
-  desonglll/sd-get-frontend:latest
+  desonglll/sd-pro-frontend:latest
 ```
 
 **ALL IN ONE**
 
 ```shell
-docker run -d --name sd-get-backend -p 8000:8000 -e DJANGO_SETTINGS_MODULE=sd_pro.settings -e DEBUG=1 desonglll/sd-get-backend:latest && \
-docker run -d --name sd-get-frontend -p 3000:80 desonglll/sd-get-frontend:latest
+docker run -d --name sd-pro-backend -p 8000:8000 -e DJANGO_SETTINGS_MODULE=sd_pro.settings -e DEBUG=1 desonglll/sd-pro-backend:latest && \
+docker run -d --name sd-pro-frontend -p 3000:80 desonglll/sd-pro-frontend:latest
 ```
 
 **OR**
@@ -66,8 +66,8 @@ Then paste the following configuration into `docker-compose.yml`
 # docker-compose.yml
 services:
   backend:
-    image: desonglll/sd-get-backend:latest
-    container_name: sd-get-backend
+    image: desonglll/sd-pro-backend:latest
+    container_name: sd-pro-backend
     ports:
       - "8000:8000"
     environment:
@@ -75,8 +75,8 @@ services:
       - DEBUG=1
 
   frontend:
-    image: desonglll/sd-get-frontend:latest
-    container_name: sd-get-frontend
+    image: desonglll/sd-pro-frontend:latest
+    container_name: sd-pro-frontend
     ports:
       - "3000:80"
 ```
@@ -137,7 +137,7 @@ jobs:
         with:
           context: ./frontend
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/sd-get-frontend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/sd-pro-frontend:latest
           platforms: linux/amd64,linux/arm64
 
       - name: Build and push backend image
@@ -145,6 +145,6 @@ jobs:
         with:
           context: ./backend
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/sd-get-backend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/sd-pro-backend:latest
           platforms: linux/amd64,linux/arm64
 ```
