@@ -52,8 +52,20 @@ docker run -d \
 **ALL IN ONE**
 
 ```shell
-docker run -d --name sd-pro-backend -p 8000:8000 -e DJANGO_SETTINGS_MODULE=sd_pro.settings -e DEBUG=1 desonglll/sd-pro-backend:latest && \
-docker run -d --name sd-pro-frontend -p 3000:80 desonglll/sd-pro-frontend:latest
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+docker rmi $(docker images -aq) -f
+docker network prune -f
+docker volume prune -f
+docker system prune -a -f
+
+
+docker network create sd-network
+docker run -d --name sd-pro-backend --network sd-network -p 8000:8000 \
+    -e DJANGO_SETTINGS_MODULE=sd_pro.settings -e DEBUG=1 \
+    desonglll/sd-pro-backend:latest
+docker run -d --name sd-pro-frontend --network sd-network -p 3000:80 \
+    desonglll/sd-pro-frontend:latest
 ```
 
 **OR**

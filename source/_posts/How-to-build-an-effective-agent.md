@@ -1,5 +1,6 @@
 ---
 title: How to build an effective agent
+date: 2025-01-19 22:12:45
 ---
 
 # 如何构建有效的LLM智能体

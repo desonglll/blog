@@ -7,6 +7,14 @@ category:
 date: 2025-01-20 11:17:07
 ---
 
+## Install neovim
+
+```shell
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:neovim-ppa/unstable # stable
+sudo apt update
+```
+
 ## Install essential tools
 
 ```shell
