@@ -16,7 +16,7 @@ Below is an instruction that describes a task, paired with an input that provide
 {instruction}
 
 ### Input:
-{input}
+{}
 
 ### Response:
 ```

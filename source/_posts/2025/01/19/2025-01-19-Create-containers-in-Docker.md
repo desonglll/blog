@@ -48,3 +48,9 @@ Start with persistent storage
 ```
 docker run --name some-redis -d redis redis-server --save 60 1 --loglevel warning
 ```
+
+## MySQL
+
+```
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=070011 -p 3306:3306 -d mysql
+```
