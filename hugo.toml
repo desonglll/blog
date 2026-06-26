@@ -1,0 +1,39 @@
+baseURL = 'https://desonglll.github.io/blog/'
+locale = 'en-us'
+title = "Tesung Lin's Blog"
+
+hasCJKLanguage = true
+summaryLength = 70
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 20
+
+  [[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 30
+
+
+[module]
+# [[module.imports]]
+# disable = false
+# ignoreConfig = false
+# ignoreImports = false
+# path = 'github.com/gohugo-ananke/ananke/v2'
+
+[[module.imports]]
+disable = false
+ignoreConfig = false
+ignoreImports = false
+path = 'github.com/adityatelange/hugo-PaperMod'
+
+[params]
+show_reading_time = true
