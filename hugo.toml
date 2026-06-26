@@ -4,6 +4,7 @@ title = "Tesung Lin's Blog"
 
 hasCJKLanguage = true
 summaryLength = 70
+showToc = true
 
 [menus]
   [[menus.main]]
@@ -21,14 +22,6 @@ summaryLength = 70
     pageRef = '/tags'
     weight = 30
 
-
-[module]
-# [[module.imports]]
-# disable = false
-# ignoreConfig = false
-# ignoreImports = false
-# path = 'github.com/gohugo-ananke/ananke/v2'
-
 [[module.imports]]
 disable = false
 ignoreConfig = false
@@ -36,4 +29,9 @@ ignoreImports = false
 path = 'github.com/adityatelange/hugo-PaperMod'
 
 [params]
-show_reading_time = true
+showReadingTime = true
+
+[params.editPost]
+URL = "https://github.com/desonglll/blog/tree/main/content"
+Text = "Suggest Changes" # edit text
+appendFilePath = true
