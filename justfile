@@ -1,8 +1,8 @@
 
 #!/usr/bin/env just --justfile
 
-default:
-  @just --list
+default: serve
+  # @just --list
 
 time := `date "+%Y-%m-%d %H:%M:%S"`
 
