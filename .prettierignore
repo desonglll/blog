@@ -1,0 +1,6 @@
+# Hugo templates are not plain HTML; default Prettier can break Go template syntax.
+layouts/**/*.html
+themes/**/*.html
+
+# Generated site output should not be reformatted.
+public/
