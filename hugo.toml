@@ -5,28 +5,29 @@ title = "Tesung Lin's Blog"
 hasCJKLanguage = true
 summaryLength = 70
 showToc = true
+theme = [ 'PaperMod' ]
 
 [menus]
-  [[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
 
-  [[menus.main]]
-    name = 'Posts'
-    pageRef = '/posts'
-    weight = 20
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
 
-  [[menus.main]]
-    name = 'Tags'
-    pageRef = '/tags'
-    weight = 30
+[[menus.main]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 30
 
-[[module.imports]]
-disable = false
-ignoreConfig = false
-ignoreImports = false
-path = 'github.com/adityatelange/hugo-PaperMod'
+# [[module.imports]]
+# disable = false
+# ignoreConfig = false
+# ignoreImports = false
+# path = 'github.com/adityatelange/hugo-PaperMod'
 
 [params]
 showReadingTime = true

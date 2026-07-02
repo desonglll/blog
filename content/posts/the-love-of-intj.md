@@ -3,6 +3,7 @@ date = '2026-06-28T15:48:29+08:00'
 draft = false
 title = 'INTJ 的爱'
 tags = ["转载"]
+repost = true
 +++
 
 我老公有一个特别奇怪的习惯，我观察了好几年才摸出规律。
