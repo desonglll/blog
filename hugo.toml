@@ -7,6 +7,9 @@ summaryLength = 70
 showToc = true
 theme = [ 'PaperMod' ]
 
+[params]
+mainSections = ['posts']
+showReadingTime = true
 [menus]
 [[menus.main]]
 name = 'Home'
@@ -28,9 +31,6 @@ weight = 30
 # ignoreConfig = false
 # ignoreImports = false
 # path = 'github.com/adityatelange/hugo-PaperMod'
-
-[params]
-showReadingTime = true
 
 [params.editPost]
 URL = "https://github.com/desonglll/blog/tree/main/content"

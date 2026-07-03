@@ -42,10 +42,16 @@
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" true }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
-{{- $pages = where $pages "Params.repost" "!=" true }}
-{{- $pages = where $pages "Params.repost" "!=" "true" }}
+{{- $homePages := slice }}
+{{- range $pages }}
+{{- $hiddenInHomeList := .Param "hiddenInHomeList" | default false }}
+{{- $repost := .Param "repost" | default false }}
+{{- if not (or (eq $hiddenInHomeList true) (eq $hiddenInHomeList "true") (eq $repost true) (eq $repost "true")) }}
+{{- warnf "home include: %s repost=%v hiddenInHomeList=%v" .File.Path $repost $hiddenInHomeList }}
+{{- $homePages = $homePages | append . }}
+{{- end }}
+{{- end }}
+{{- $pages = $homePages }}
 {{- end }}
 
 {{- $paginator := .Paginate $pages }}

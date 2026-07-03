@@ -23,3 +23,6 @@ push: publish
     git add --ignore-removal .
     git commit -m "last updated at {{time}} by `git config user.name`"
     git push -u origin main
+
+new name:
+    hugo new content content/posts/{{name}}.md
