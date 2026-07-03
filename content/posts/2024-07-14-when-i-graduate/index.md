@@ -1,6 +1,6 @@
 +++
 date = '2024-07-14T15:49:55+08:00'
-draft = true
+draft = false
 title = 'When I Graduate'
 repost = false
 +++
