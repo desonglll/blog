@@ -2,9 +2,11 @@
 date = '2026-06-26T15:48:29+08:00'
 draft = false
 title = 'Goodbye Siliconflow'
-images = [ 'https://raw.githubusercontent.com/desonglll/blog-images/main/images/20260401120908000.jpeg' ]
 tags = ["实习"]
 weight = 1
+
+[cover]
+image = 'https://raw.githubusercontent.com/desonglll/blog-images/main/images/20260401120908000.jpeg'
 +++
 
 今天是2026年6月26日，也是我要从硅基流动离职的日子，想着3个月的时间这么快就过去了，记录一下以后好回忆起来这段时光。

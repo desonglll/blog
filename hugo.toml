@@ -7,6 +7,18 @@ summaryLength = 70
 showToc = true
 theme = [ 'PaperMod' ]
 
+[params.homeInfoParams]
+Title = "Hi, I'm Desong"
+Content = "这里是我的博客，记录技术、阅读和生活。"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/desonglll"
+
+[[params.socialIcons]]
+name = "rss"
+url = "/index.xml"
+
 [params]
 mainSections = ['posts']
 showReadingTime = true

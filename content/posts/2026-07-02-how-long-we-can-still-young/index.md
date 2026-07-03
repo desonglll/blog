@@ -2,6 +2,10 @@
 date = '2026-07-02T11:11:59+08:00'
 draft = false
 title = 'How Long We Can Still Young'
+
+[cover]
+image = 'https://raw.githubusercontent.com/desonglll/blog-images/main/images/20260628163752000.jpeg'
+hiddenInList = true
 +++
 
 上周李骏来找我玩了，他和爸妈出差，落地北京，正好我上周末离职了，所以有几天的空闲。

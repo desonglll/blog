@@ -5,6 +5,7 @@ default: serve
   # @just --list
 
 time := `date "+%Y-%m-%d %H:%M:%S"`
+date := `date "+%Y-%m-%d"`
 
 install:
     brew install hugo
@@ -25,4 +26,4 @@ push: publish
     git push -u origin main
 
 new name:
-    hugo new content content/posts/$(date +%F)-{{name}}.md
+    hugo new "content/posts/{{date}}-{{name}}/index.md"
