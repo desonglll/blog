@@ -47,7 +47,6 @@
 {{- $hiddenInHomeList := .Param "hiddenInHomeList" | default false }}
 {{- $repost := .Param "repost" | default false }}
 {{- if not (or (eq $hiddenInHomeList true) (eq $hiddenInHomeList "true") (eq $repost true) (eq $repost "true")) }}
-{{- warnf "home include: %s repost=%v hiddenInHomeList=%v" .File.Path $repost $hiddenInHomeList }}
 {{- $homePages = $homePages | append . }}
 {{- end }}
 {{- end }}

@@ -25,4 +25,4 @@ push: publish
     git push -u origin main
 
 new name:
-    hugo new content content/posts/{{name}}.md
+    hugo new content content/posts/$(date +%F)-{{name}}.md

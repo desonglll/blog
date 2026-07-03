@@ -1,0 +1,10 @@
+{{- $url := .Destination | safeURL -}}
+{{- $filename := path.Base .Destination -}}
+
+<a href="{{ $url }}" target="_blank" rel="noopener">
+  {{- with .Text -}}
+    {{ . }}
+  {{- else -}}
+    {{ $filename }}
+  {{- end -}}
+</a>
