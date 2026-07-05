@@ -1,0 +1,48 @@
+name: New Post
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: "Post title"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
+          extended: true # 如果你的主题需要 Hugo Extended
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Create post
+        run: |
+          just new "${{ github.event.inputs.title }}"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add .
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git commit -m "Create post: ${{ github.event.inputs.title }}"
+          git push
