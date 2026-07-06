@@ -2,7 +2,7 @@
 date = '2026-07-03T15:33:56+08:00'
 draft = false
 title = 'Reading List'
-repost = false
+repost = true
 +++
 
 - [ ] 1. 《爱弥儿（精选本）》【卢梭】

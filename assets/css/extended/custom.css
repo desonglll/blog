@@ -1,5 +1,5 @@
 body {
-  font-family: "Lato", "Noto Serif SC", sans-serif;
+  font-family: "Lato", "Noto Sans SC", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   letter-spacing: 0.05em;
@@ -7,4 +7,9 @@ body {
 
 .logo a {
     font-family: "Geist Pixel", sans-serif;
+}
+
+::selection {
+  background-color: #ffcc00;
+  color: #333333;           
 }
